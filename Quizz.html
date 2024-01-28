@@ -1,0 +1,484 @@
+﻿<html>
+    <head>
+        <title>
+            Quizz Page
+        </title>
+
+        <meta charset="utf-8">
+        <style type = "text/css">
+
+        .Information
+        {
+            position: relative;
+            display: inline-block;
+            border-bottom: 2px dotted black;
+        }
+
+        .Information .InformationText
+        {
+            visibility: hidden;
+            width:fit-content;
+            background-color: lightgrey;
+            color:black;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            font-size: medium;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+        .Information:hover .InformationText
+        {
+            visibility: visible;
+        }
+        body
+        {
+            background-color: lightblue;
+        }
+            
+        .SitesList
+        {
+            list-style-type: disc;
+        }
+
+        .FirstColumn
+        {
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            
+        }
+
+        .FirstColumn:hover
+        {
+            color: blue;
+        }
+        
+        .ErrorColorTheWord
+        {
+            color: red;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .ColorTheWord
+        {
+            color:green;
+        }
+
+        .Sites
+        {
+            color:dodgerblue;
+        }
+        .Sites:hover
+        {
+            color: aqua;
+            font-size: 20px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+        
+        hr
+        {
+            width: 70%;
+            size: 2;
+            color: white;
+        }
+
+        table
+        {
+            float: left;
+            border: 0pc;
+            width: 30%;
+            height: 10%;
+        }
+        
+        ol
+        {
+            padding-left: 1%;
+            list-style: upper-roman;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        ol:hover
+        {
+            font-size: 17px;
+            color: blueviolet;
+        }
+        .FloatRightImage
+        {
+            float: right;
+            width: 5%;
+            height: 8%;
+        }
+
+        .FloatLeftImage
+        {
+            float: left;
+            width: 5%;
+            height: 8%;
+        }
+
+        textarea
+        {
+            resize: none;
+        }
+        .Container:hover
+        {
+            opacity: 0.5;
+            transition: 0.5s ease;
+            background-color: #008CBA;
+        }
+
+        input
+        {
+            border-radius: 5px;
+        }
+
+        input[type=text]:hover
+        {
+            border-radius: 10px;
+            border: solid green;
+        }
+
+        input[type=password]:hover
+        {
+            border-radius: 10px;
+            border: solid blue;
+        }
+
+        input[type=email]:hover
+        {
+            border-radius: 10px;
+            border: solid brown;
+        }
+
+        input[type=color]:hover
+        {
+            transform: scale(1.2);
+        }
+
+        input[type=color]
+        {
+            float: right;
+            width: 8%;
+            height: 5%;
+        }
+
+        input[type=range]
+        {
+            margin-right: 60px;
+        }
+
+        input[type=reset]
+        {
+            width: 100%;
+        }
+
+        footer
+        {
+            position:fixed;
+            left:0;
+            bottom:0;
+            width:100%;
+            background-color:lightgray;
+            color:white;
+            font-size:large;
+            border:2px  #2f3036;
+            height:50px;
+            text-align:center;
+        }
+        
+
+        .FooterText
+        {
+            color:black;
+            position:static;
+        }
+
+        .ContactUs
+        {
+            float:right;
+            margin-right: 5px;
+            text-decoration: underline;
+        }
+        .ContactUs:hover
+        {
+            color: red;
+            font-size: 10 px;
+        }
+
+        .ApplyForAJob
+        {
+            float:left;
+            margin-left: 5px;
+            text-decoration: underline;
+        }
+
+        .Peinture
+        {
+            width: 300px;
+            height: 300px;
+        }
+
+        .MonaLisaText
+        {
+            float: right;
+            width: fit-content;
+        }
+
+        .Question
+        {
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: medium;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .OriginalPicture
+        {
+            filter: grayscale(0%);
+            width: 300px;
+            height: 300px;
+        }
+
+
+        ul 
+        {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            position: absolute;
+        }
+
+        li 
+        {
+            display:inline-block;
+            float: left;
+            margin-right: 1px;
+        }
+        li a 
+        {
+            display:block;
+            min-width:140px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #fff;
+            background: #2f3036;
+            text-decoration: none;
+        }
+
+        li:hover a 
+        {
+            background: lightblue;
+        }
+        li:hover ul a 
+        {
+            background: #f3f3f3;
+            color: #2f3036;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        li:hover ul a:hover 
+        {
+            background:lightblue ;
+            color: #fff;
+        }
+        li ul 
+        {
+            display: none;
+        }
+        li ul li {
+            display: block;
+            float: none;
+        }
+
+        li ul li a 
+        {
+            width: auto;
+            min-width: 100px;
+            padding: 0 20px;
+        }
+        ul li a:hover + .hidden, .hidden:hover 
+        {
+            display: block;
+        }
+        .menu
+        {
+            position:center;
+        }
+
+        </style>
+        <script language = "javascript">
+            
+            function ValidateQuestions()
+            {
+                i=0;
+                if(document.getElementById("Leonardo").checked==true)
+                {
+                    i++;
+                }
+                if(document.getElementById("1503").checked==true)
+                {
+                    i++;
+                }
+                s="Your score is: " + i + "/2";
+                alert(s);
+            }
+
+            function OriginalPicture()
+            {
+                document.getElementById("BlurringRange").value = 0;
+                document.getElementById("MonaLisa").style.filter = "blur(0px)";
+                document.getElementById("MonaLisa").className = "OriginalPicture";
+                document.getElementById("MonaLisa").style.borderRadius = "0px";
+                document.getElementById("MonaLisa").style.transform = "rotate(0deg)"; 
+                document.getElementById("MonaLisa").style.border = "";
+            }
+
+            function BlackAndWhitePicture()
+            {
+                document.getElementById("BlurringRange").value = 0;
+                document.getElementById("MonaLisa").style.filter = "blur(0px)";
+                document.getElementById("MonaLisa").style.filter = "grayscale(100%)";
+            }
+
+            function Blurring()
+            {
+                a = document.getElementById("BlurringRange").value;
+                document.getElementById("MonaLisa").style.filter = "blur(" + a + "px)";
+            }
+
+            function MaximumBlurring()
+            {
+                document.getElementById("BlurringRange").value = 8;
+                document.getElementById("MonaLisa").style.filter = "blur(8px)";
+            }
+
+            function RoundedBorders()
+            {
+                document.getElementById("MonaLisa").style.borderRadius = "80px";
+                document.getElementById("MonaLisa").style.border = "10px solid #FF0000";
+            }
+            function GrayScale()
+            {
+                a = document.getElementById("GrayScalingImage").value;
+                document.getElementById("MonaLisa").style.filter = "grayscale(" + a + "%)";
+            }
+            function Rotate()
+            {
+                a = document.getElementById("RotationImage").value;
+                document.getElementById("MonaLisa").style.transform = "rotate(" + a + "deg)";
+            }
+        </script>
+    </head>
+    <body id="Body">
+        <form>
+            <header>
+                <ul id="menu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li>
+                        <a href="#">About ￬</a>
+                        <ul class="hidden">
+                            <li><a href="WhoWeAre.html">Who We Are</a></li>
+                            <li><a href="WhatWeDo.html">What We Do</a></li>
+                        </ul>
+                    </li>
+               
+                    <li><a href="Editing page.html">Editing</a></li>
+                    <li><a href="products.html">Prices</a></li>
+                    <li><a href="Quizz.html">Quizz</a></li>
+                    <li><a href="SignUp.html">Customer Info</a></li>
+                    <li><a href="Careers.html">Careers</a></li>
+                    <li><a href="Contact us page.html">Contact us</a></li>
+                </ul>
+                <br><br><br>
+            </header>
+                <div class="Container">
+                    <img src="Image.png" class="FloatRightImage">
+                    <img src="Image.png" class="FloatLeftImage">
+                    <center>
+                        <h1 class="Information">
+                            Quizz Page (A text will appear when we <br> approach the mouse)
+                            <span class="InformationText">
+                                Hello, this is a quiz page.
+                            </span>
+                        </h1>
+                    </center>
+                </div>
+
+                <h3 style="text-decoration: underline;">Questions</h3>
+                
+                <ol>
+                    <table style="width: fit-content; height: fit-content;">
+                        <tbody>
+                            <tr>
+                                <td class="Question">
+                                   <li>Who painted MonaLisa?</li> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="radio1" id="Leonardo">Leonardo Da Vinci</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="radio1" id="Michelangelo">Michelangelo</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="radio1" id="Vincent">Vincent Van Gogh</td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td class="Question">
+                                    <li>In What year was it painted?</li> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="radio2" id="1502">1502</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="radio2" id="1503">1503</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="radio2" id="1504">1504</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="button" value="validate" onclick=ValidateQuestions()></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ol>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4"><img src="MonaLisa.jpg" id="MonaLisa" class="Peinture" alt="There Should be Mona Lisa Painting" ></td>
+                            <td><input type="button" value="Original Picture" onclick=OriginalPicture()></td>
+                            <td><input type="button" value="Black And White" onclick=BlackAndWhitePicture()></td>
+                            <td><input type="button" value="Maximum Blurring" onclick=MaximumBlurring()></td>
+                            <td><input type="button" value="Rounded Borders" onclick=RoundedBorders()></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>GrayScale Range 0-100<input type="range" id="GrayScalingImage" max="100" min="0" class="slider" onchange=GrayScale()></td>
+                            <td>Blurring Range 0-8<input type="range" id="BlurringRange" max="8" min="0" class="slider" onchange=Blurring()></td>
+                            <td>Rotation 0-360<input type="number" id="RotationImage" max="360" min="0" value="0" onchange=Rotate()></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+        
+        <footer id="BottomOfThePage">
+            <p>
+                <a class="ContactUs" href="https://www.google.com" target="_blank">Contact us</a>
+                <a class="ApplyForAJob" href="https://www.google.com" target="_blank">Apply for a Job</a>
+                2021 photoediting @photoeditor.com
+            </p>
+        </footer>
+    </body>
+
+
+</html>

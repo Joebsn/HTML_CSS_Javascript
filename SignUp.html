@@ -1,0 +1,626 @@
+<html>
+    <head>
+        <title>
+            Sign up Page
+        </title>
+        <meta charset="utf-8">
+        <style type = "text/css">
+
+        .Information
+        {
+            position: relative;
+            display: inline-block;
+            border-bottom: 2px dotted black;
+        }
+
+        .Information .InformationText
+        {
+            visibility: hidden;
+            width:fit-content;
+            background-color: lightgrey;
+            color:black;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            font-size: medium;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+        .Information:hover .InformationText
+        {
+            visibility: visible;
+        }
+        body
+        {
+            background-color: lightblue;
+        }
+            
+        .SitesList
+        {
+            list-style-type: disc;
+        }
+
+        .FirstColumn
+        {
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .FirstColumn:hover
+        {
+            color: blue;
+        }
+        
+        .ErrorColorTheWord
+        {
+            color: red;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .ColorTheWord
+        {
+            color:green;
+        }
+
+        .Sites
+        {
+            color:dodgerblue;
+        }
+        .Sites:hover
+        {
+            color: aqua;
+            font-size: 20px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+        
+        hr
+        {
+            width: 70%;
+            size: 2;
+            color: white;
+        }
+
+        table
+        {
+            float: left;
+            border: 0pc;
+            width: 30%;
+            height: 10%;
+        }
+        
+        ol li
+        {
+            padding-left: 1%;
+            list-style: upper-roman;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        ol:hover
+        {
+            font-size: 17px;
+            color: blueviolet;
+        }
+        .FloatRightImage
+        {
+            float: right;
+            width: 5%;
+            height: 8%;
+        }
+
+        .FloatLeftImage
+        {
+            float: left;
+            width: 5%;
+            height: 8%;
+        }
+
+        textarea
+        {
+            resize: none;
+        }
+        .Container:hover
+        {
+            opacity: 0.5;
+            transition: 0.5s ease;
+            background-color: #008CBA;
+        }
+
+        input
+        {
+            border-radius: 5px;
+        }
+
+        input[type=text]:hover
+        {
+            border-radius: 10px;
+            border: solid green;
+            width: 100%;
+        }
+
+        input[type=password]:hover
+        {
+            border-radius: 10px;
+            border: solid blue;
+        }
+
+        input[type=email]:hover
+        {
+            border-radius: 10px;
+            border: solid brown;
+        }
+
+        input[type=color]:hover
+        {
+            transform: scale(1.2);
+        }
+
+        input[type=color]
+        {
+            float: right;
+            width: 8%;
+            height: 5%;
+        }
+
+        input[type=range]
+        {
+            margin-right: 60px;
+        }
+
+        input[type=reset]
+        {
+            width: 70%;
+        }
+        input[type=button]
+        {
+            width: 90%;
+        }
+        input[type=date]
+        {
+            width: 100%;
+        }
+
+        footer
+        {
+            position:fixed;
+            left:0;
+            bottom:0;
+            width:100%;
+            background-color:lightgray;
+            color:white;
+            font-size:large;
+            border:2px  #2f3036;
+            height:50px;
+            text-align:center;
+        }
+        
+
+        .FooterText
+        {
+            color:black;
+            position:static;
+        }
+
+        .ContactUs
+        {
+            float:right;
+            margin-right: 5px;
+            text-decoration: underline;
+        }
+        .ContactUs:hover
+        {
+            color: red;
+            font-size: 10 px;
+        }
+
+        .ApplyForAJob
+        {
+            float:left;
+            margin-left: 5px;
+            text-decoration: underline;
+        }
+
+        .Peinture
+        {
+            width: 300px;
+            height: 300px;
+        }
+
+        .MonaLisaText
+        {
+            float: right;
+            width: fit-content;
+        }
+
+        .Question
+        {
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: medium;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .OriginalPicture
+        {
+            filter: grayscale(0%);
+            width: 300px;
+            height: 300px;
+        }
+
+
+        ul 
+        {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            position: absolute;
+        }
+
+        li 
+        {
+            display:inline-block;
+            float: left;
+            margin-right: 1px;
+        }
+        li a 
+        {
+            display:block;
+            min-width:140px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #fff;
+            background: #2f3036;
+            text-decoration: none;
+        }
+
+        li:hover a 
+        {
+            background: lightblue;
+        }
+        li:hover ul a 
+        {
+            background: #f3f3f3;
+            color: #2f3036;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        li:hover ul a:hover 
+        {
+            background:lightblue ;
+            color: #fff;
+        }
+        li ul 
+        {
+            display: none;
+        }
+        li ul li {
+            display: block;
+            float: none;
+        }
+
+        li ul li a 
+        {
+            width: auto;
+            min-width: 100px;
+            padding: 0 20px;
+        }
+        ul li a:hover + .hidden, .hidden:hover 
+        {
+            display: block;
+        }
+        .menu
+        {
+            position:center;
+        }
+
+        </style>
+        <script language = "javascript">
+            function ValidateFirstName(x)
+            {
+                if ((document.getElementById(x).value.length < 3) || (document.getElementById(x).value.length > 15))
+                {
+                    alert("FirstName should be between 3 to 15 letters");
+                    document.getElementById(x).className = "ErrorColorTheWord";
+                    document.getElementById("FirstNameCheckBox").checked = false;
+                    return false;
+                }
+                else
+                {
+                    document.getElementById(x).className = "ColorTheWord";
+                    document.getElementById("FirstNameCheckBox").checked = true;
+
+                    UpdateTextArea("No");
+                    return true;
+                }
+            }
+
+            function ValidateLastName(x)
+            {
+                if ((document.getElementById(x).value.length < 3) || (document.getElementById(x).value.length > 15))
+                {
+                    alert("LastName should be between 3 to 15 letters");
+                    document.getElementById(x).className = "ErrorColorTheWord";
+                    document.getElementById("LastNameCheckBox").checked = false;
+                    return false;
+                }
+                else
+                {
+                    document.getElementById(x).className = "ColorTheWord";
+                    document.getElementById("LastNameCheckBox").checked = true;
+
+                    UpdateTextArea("No");
+                    return true;
+                }
+            }
+            
+            function ValidateEmail(x)
+            {
+                
+                i = document.getElementById(x).value.indexOf("@");
+                j = document.getElementById(x).value.indexOf(".");
+                domain = document.getElementById(x).value.substring(j+1,j+4);
+                comp = document.getElementById(x).value.substring(i+1,j);
+                text = document.getElementById(x).value.substring(0,i);
+                y = true;
+                s="";
+
+                if(i==-1)
+                {
+                    s += "Missing @ " + "\n";
+                    y = false;
+                }
+                if(j==-1)
+                {
+                    s += "Missing . " + "\n";
+                    y = false;
+                }
+                if(i > j)
+                {
+                    s += "@ should be before ." + "\n";
+                    y = false;
+                }
+                
+                if(domain != "com")
+                {
+                    s += "The domain should be .com" + "\n";
+                    y = false;
+                }
+                if ((comp != "hotmail") && (comp != "gmail") && (comp != "yahoo"))
+                {
+                    s += "Invalid company, It should be hotmail, gmail or yahoo" + "\n";
+                    y = false;
+                }
+                
+                if(text.length<5)
+                {
+                    s += "Text before the @ should be at least 5 letters " + "\n";
+                    y = false;
+                }
+
+                if(y==false)
+                {
+                    document.getElementById(x).className = "ErrorColorTheWord";
+                    alert(s);
+                    document.getElementById("EmailAddressCheckBox").checked = false;
+                } 
+
+                else
+                {
+                    document.getElementById(x).className = "ColorTheWord";
+                    document.getElementById("EmailAddressCheckBox").checked = true;
+                }
+
+                UpdateTextArea("No");
+                return y;
+            }
+
+            function ChangeBackgroundColor(x)
+            {
+                document.getElementById(x).style.backgroundColor = document.getElementById("TheColor").value;
+            }
+
+            function UpdateTextArea(b)
+            {
+                if(typeof UpdateTextArea.NumberOfAccounts == 'undefined')
+                {
+                    UpdateTextArea.NumberOfAccounts = 0; //Defining a static variable
+                }
+
+                if ((document.getElementById("YesOrNo").value == "No") && (b=="Yes"))
+                {
+                    AccountNumbers = window.prompt("How many account do you already have?");
+                    NumberOfAccounts = parseInt(AccountNumbers);
+                }
+
+                if((document.getElementById("FirstNameCheckBox").checked==true) && 
+                    (document.getElementById("LastNameCheckBox").checked==true) && 
+                    (document.getElementById("EmailAddressCheckBox").checked == true) &&
+                    (document.getElementById("Birthday").value != ""))
+                    {
+                        s = "";
+                        s += "Hello " + document.getElementById("FirstNameText").value + " " + document.getElementById("LastNameText").value;
+                        s += "\n";
+                        s += "Your Email-Address is: " + document.getElementById("Email").value + "\n";
+                        
+                        if(document.getElementById("YesOrNo").value == "Yes")
+                        {
+                            s += "This is your first account";
+                        }
+                        else if (document.getElementById("YesOrNo").value == "No")
+                        {
+                            s += "You already have " + NumberOfAccounts + " accounts";
+                        }
+                        s += "\n";
+                        s += "You were born in " + document.getElementById("Birthday").value;
+                        document.getElementById("TextArea").value = s;
+                    }
+            }
+
+            function ClearAll()
+            {
+                document.all.reset();
+            }
+
+            function ValidateAll()
+            {
+                if((ValidateFirstName("FirstNameText")==true) && (ValidateLastName("LastNameText")==true)
+                && (ValidateEmail("Email")) && (document.getElementById("Birthday").value != "") && (CheckIfSamePassword()==true))
+                {
+                    alert("Correct Informations");
+                    window.open("Quizz.html","_self");
+                    return true;
+                }
+                alert("Wrong Informations");
+                return false;
+            }
+
+            function CheckIfSamePassword()
+            {
+                if(document.getElementById("Password").value.length > 7)
+                {
+                    if(document.getElementById("Password").value != "")
+                    {
+                        if(document.getElementById("PasswordVerification").value != "")
+                        {
+                            if(document.getElementById("Password").value == document.getElementById("PasswordVerification").value)
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                alert("The passwords are not the same");
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            alert("Write your password a second time");
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        alert("Choose a password");
+                        return false;
+                    }
+                }
+                else
+                {
+                    alert("Password must be at least 8 characters");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body id="Body">
+        <form>
+            <header>
+                <ul id="menu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li>
+                        <a href="#">About ￬</a>
+                        <ul class="hidden">
+                            <li><a href="WhoWeAre.html">Who We Are</a></li>
+                            <li><a href="WhatWeDo.html">What We Do</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Portfolio ￬</a>
+                        <ul class="hidden">
+                            <li><a href="#">Landscape</a></li>
+                            <li><a href="#">Portrait</a></li>
+                            <li><a href="#">Art</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Editing page.html">Editing</a></li>
+                    <li><a href="products.html">Prices</a></li>
+                    <li><a href="Quizz.html">Quizz</a></li>
+                    <li><a href="SignUp.html">Customer Info</a></li>
+                    <li><a href="Careers.html">Careers</a></li>
+                    <li><a href="Contact us page.html">Contact us</a></li>
+                </ul>
+                <br><br><br>
+            </header>
+                <div class="Container">
+                    <img src="Image.png" class="FloatRightImage">
+                    <img src="Image.png" class="FloatLeftImage">
+                    <center>
+                        <h1 class="Information">
+                            Sign Up (Click here <br> for more informations)
+                            <span class="InformationText">
+                                Hello, Fill in the informations below so you can enter the full website.
+                            </span>
+                        </h1>
+                    </center>
+                </div>
+                <ol>
+                    <li><h3>Informations</h3> </li>
+                    <br><br><br><br>
+                        <table style="font-size: larger; position: fixed;" >
+                            <tbody>
+                                <tr>
+                                    <td class="FirstColumn"> FirstName:</td>
+                                    <td><input type="text" id="FirstNameText" onchange = ValidateFirstName("FirstNameText")></td>
+                                    <td><input type="checkbox" id="FirstNameCheckBox" disabled readonly></td>
+                                    <td rowspan="3"> <textarea id="TextArea" rows="5px" cols="50px" placeholder="Fill all the informations so they can appear here" disabled readonly></textarea></td>
+                                
+                                </tr>
+                                <tr>
+                                    <td class="FirstColumn"> LastName: </td>
+                                    <td><input type="text" id="LastNameText" onchange = ValidateLastName("LastNameText")></td></td>
+                                    <td><input type="checkbox" id="LastNameCheckBox" disabled readonly></td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td class="FirstColumn"> E-mail address:</td>
+                                    <td><input type="email" name="Email" id="Email" onchange = ValidateEmail("Email")></td>
+                                    <td><input type="checkbox" id="EmailAddressCheckBox" disabled readonly></td>
+                                </tr>
+                                <tr>
+                                    <td class="FirstColumn"> First Account?</td>
+                                    <td>
+                                        <select name="YesOrNo" id ="YesOrNo" onchange=UpdateTextArea("Yes")>
+                                            <option value="Yes" selected> Yes</option>
+                                            <option value="No"> No</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="FirstColumn">Birthday:</td>
+                                    <td><input type="date" id="Birthday" placeholder="yyyy-mm-dd" name="Birthday" min="1950-01-01" max="2003-01-01" onchange=UpdateTextArea("No")></td>
+                                </tr>
+                                <tr>
+                                    <td class="FirstColumn"> Password:</td>
+                                    <td><input type="password" id="Password" minlength="8" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="FirstColumn">  Verification:</td>
+                                    <td><input type="password" id="PasswordVerification" minlength="8" required></td>
+                                </tr>
+                                <tr>
+                                    <td> <input type="button" value="validate" onclick=ValidateAll()></td>
+                                    <td><input type="reset" value="clear" onclick=ClearAll()></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input type="color" id="TheColor" value="#DFE5F6" onchange=ChangeBackgroundColor("Body")>
+                    <hr>
+                </ol>
+            </div>
+        </form>
+        
+        <footer id="BottomOfThePage">
+            <p>
+                <a class="ContactUs" href="Contact us page.html" target="_blank">Contact us</a>
+                <a class="ApplyForAJob" href="Careers.html" target="_blank">Apply for a Job</a>
+                2021 photoediting @photoeditor.com
+            </p>
+        </footer>
+    </body>
+</html>
